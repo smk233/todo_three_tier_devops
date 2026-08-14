@@ -2,17 +2,15 @@ services:
 
   frontend:
     build: ./Application-Code/frontend
-    container_name: todo-frontend
     ports:
       - "5173:3000"
     environment:
-      - REACT_APP_BACKEND_URL=http://13.201.225.83:3500/api/tasks
+      - REACT_APP_BACKEND_URL=http://65.1.116.101:3500/api/tasks
     depends_on:
       - backend
 
   backend:
     build: ./Application-Code/backend
-    container_name: todo-backend
     ports:
       - "3500:3500"
     environment:
@@ -22,7 +20,6 @@ services:
 
   mongodb:
     image: mongo:8
-    container_name: todo-mongodb
     
     volumes:
       - mongo-data:/data/db
