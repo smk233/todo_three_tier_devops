@@ -5,7 +5,7 @@ services:
     ports:
       - "5173:3000"
     environment:
-      - REACT_APP_BACKEND_URL=http://65.1.116.101:3500/api/tasks
+      - REACT_APP_BACKEND_URL=http://15.252.162.15:3500/api/tasks
     depends_on:
       - backend
 
@@ -14,7 +14,7 @@ services:
     ports:
       - "3500:3500"
     environment:
-      - mongodb://65.1.116.101:27017/todo
+      - mongodb://15.252.162.15:27017/todo
     depends_on:
       - mongodb
 
